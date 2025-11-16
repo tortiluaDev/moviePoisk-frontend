@@ -1,0 +1,94 @@
+.icons {
+  display: flex;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  gap: 1.5rem;
+}
+
+.backdropImgWrapper {
+  position: absolute;
+  z-index: -10;
+  box-shadow: inset 0 0 200px 120px #000000;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  height: 600px;
+  overflow: hidden;
+
+  .backdropImg {
+    opacity: 50%;
+    height: 110%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.info {
+  margin-top: 400px;
+  margin-inline: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  > div {
+    text-align: left;
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+
+  h1 {
+    margin-top: 6rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    color: $color-lightgray;
+
+    li {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-right: 1px solid $color-lightgray;
+        padding-right: 0.5rem;
+      }
+      &:not(:first-child) {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.about {
+  > div {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    button {
+      font-size: 1.4rem;
+      transition: 100ms all ease-out;
+      background-color: transparent;
+      opacity: 60%;
+      color: $color-lightgray;
+      cursor: pointer;
+    }
+    .active {
+      color: $color-text;
+      opacity: 100%;
+      border-bottom: 1px $color-lightgray solid;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}

@@ -1,0 +1,90 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #1f2d3f;
+  opacity: 90%;
+  z-index: 999;
+  height: 100%;
+  width: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0.5rem;
+  overflow: hidden;
+
+  transition:
+    width 300ms ease-in-out,
+    padding 300ms ease-in-out;
+
+  h1 {
+    font-size: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  nav {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+
+    > div {
+      cursor: pointer;
+      padding-block: 0.5rem;
+
+      &:not(&:last-child) {
+        border-bottom: 1px $color-lightgray solid;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 50ms color ease-in;
+        white-space: nowrap;
+      }
+      &:hover {
+        a {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}
+
+.openSidebar {
+  width: 16%;
+  padding: 2rem 1rem;
+
+  h1,
+  nav {
+    opacity: 1;
+    transition-delay: 150ms;
+  }
+}
+
+.toggleSidebar {
+  position: absolute;
+  opacity: 70%;
+  right: 0.5rem;
+  transition:
+    100ms opacity ease-out,
+    right 300ms ease-in-out;
+  cursor: pointer;
+  top: 1rem;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.openSidebar .toggleSidebar {
+  right: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}

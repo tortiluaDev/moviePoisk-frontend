@@ -1,0 +1,79 @@
+.profile {
+  width: 80%;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+
+  .avatar {
+    background-color: $color-lightgray;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 20%;
+  }
+
+  .user {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .name {
+      font-size: 1.2rem;
+    }
+
+    .email {
+      opacity: 80%;
+    }
+  }
+
+  .preferencesList {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    > p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    > ul {
+      border: 1px solid $color-accent;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem 0 2rem;
+
+      li {
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        button {
+          text-align: center;
+          padding-inline: 2px;
+          padding-top: 4px;
+
+          &:hover {
+            color: indianred;
+          }
+        }
+      }
+    }
+  }
+
+  .logout {
+    background-color: indianred;
+    padding: 0.8rem 1.5rem;
+    transition: all 100ms ease-in-out;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    &:hover {
+      opacity: 80%;
+    }
+  }
+}

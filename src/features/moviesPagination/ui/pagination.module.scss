@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+
+  .arrow {
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  > div {
+    color: $color-secondary;
+    user-select: none;
+  }
+}

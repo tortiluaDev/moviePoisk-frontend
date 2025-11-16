@@ -1,0 +1,12 @@
+.pageTab {
+  padding-block: 3px;
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-text;
+  }
+
+  &.active {
+    color: $color-accent;
+  }
+}

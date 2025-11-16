@@ -1,0 +1,11 @@
+.message {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    transition: 100ms color ease-in-out;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

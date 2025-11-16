@@ -1,0 +1,149 @@
+.authForm {
+  position: relative;
+  width: 50%;
+  margin-inline: auto;
+  background-color: rgba(0, 150, 229, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+      padding: 1rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid rgba(0, 150, 229, 0.4);
+      border-radius: 0.5rem;
+      background: transparent;
+      outline: none;
+      color: #fff;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $color-accent;
+      }
+
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        top: -0.5rem;
+        left: 0.5rem;
+        font-size: 0.75rem;
+        color: $color-lightgray;
+        background-color: transparent;
+        padding: 0 0.25rem;
+      }
+    }
+
+    input::placeholder {
+      color: transparent;
+    }
+
+    label {
+      position: absolute;
+      left: 0.75rem;
+      top: 1rem;
+      color: $color-lightgray;
+      pointer-events: none;
+      transition: 0.2s ease;
+      background: transparent;
+    }
+  }
+
+  button {
+    background-color: $color-accent;
+    font-weight: bold;
+    width: 50%;
+    align-self: center;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: 100ms all ease-in-out;
+
+    &:hover {
+      opacity: 80%;
+      color: $color-lightgray;
+    }
+  }
+
+  span {
+    color: mediumorchid;
+    font-size: 0.8rem;
+  }
+
+  .exit {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+.wrap {
+  position: relative;
+}
+
+.getPreferencesBtn {
+  background-color: transparent;
+  border: 2px $color-accent dashed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    opacity: 100%;
+    color: $color-secondary;
+  }
+}
+
+.preferences {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  column-gap: 5%;
+  row-gap: 2rem;
+  background-color: rgba(2, 34, 104, 0.8);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+
+  .preference {
+    background-color: transparent;
+    border: 1px white solid;
+    color: $color-accent;
+    text-align: center;
+    text-wrap: nowrap;
+    width: 100%;
+
+    &:hover {
+      background-color: $color-accent;
+      opacity: 80%;
+      color: white;
+    }
+
+    &.active {
+      border: 1px $color-accent solid;
+      background-color: $color-accent;
+      color: white;
+      box-shadow: $color-accent 2px -1px -1px;
+    }
+  }
+}

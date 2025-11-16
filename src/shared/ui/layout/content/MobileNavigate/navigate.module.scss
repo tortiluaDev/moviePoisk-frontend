@@ -1,0 +1,32 @@
+.navBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  border-top: 1px $color-accent solid;
+  padding-top: 8px;
+  background-color: $color-primary;
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: 200ms color ease-in-out;
+
+    &.active {
+      color: $color-accent;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobileHeader {
+    display: none;
+  }
+}

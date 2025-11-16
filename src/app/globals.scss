@@ -1,0 +1,14 @@
+@use "../shared/styles/reset";
+@use "../shared/styles/variables" as *;
+
+body {
+  background-color: $color-primary;
+  color: $color-text;
+  font-family: var(--font-poppins), var(--font-roboto);
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  transition: 100ms all ease-in-out;
+}

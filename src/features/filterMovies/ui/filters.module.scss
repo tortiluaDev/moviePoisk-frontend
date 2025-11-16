@@ -1,0 +1,20 @@
+.filters {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  font-size: 1.1rem;
+
+  button {
+    transition: 100ms all ease-out;
+    background-color: transparent;
+    opacity: 60%;
+    color: $color-lightgray;
+    cursor: pointer;
+  }
+  .active {
+    color: $color-text;
+    opacity: 100%;
+    border-bottom: 1px $color-lightgray solid;
+  }
+}

@@ -1,0 +1,10 @@
+.actionBtn {
+  transition: 50ms color ease-in-out;
+  &:hover {
+    color: $color-accent;
+  }
+
+  &.active {
+    background-color: $color-accent;
+  }
+}
